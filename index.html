@@ -33,8 +33,12 @@
             const responseJson = await fetch(
               'http://test-db-charit-saini-dev.apps.sandbox.x8i5.p1.openshiftapps.com/',
               {
-                'mode': 'no-cors',
-                'method': 'GET'
+                mode: 'no-cors',
+                method: 'GET',
+                cache: 'no-cache',
+                header: {
+                  'Content-Type': 'application/json',
+                }
               });
             const data = await responseJson.json();
             console.log(data);
