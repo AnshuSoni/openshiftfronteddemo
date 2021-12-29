@@ -30,7 +30,7 @@
     <script>
         fetchData();
         async function fetchData(){
-            const responseJson = await fetch('http://test-db-from-java-charit-saini-dev.apps.sandbox.x8i5.p1.openshiftapps.com/');
+            const responseJson = await fetch('http://test-db-charit-saini-dev.apps.sandbox.x8i5.p1.openshiftapps.com/');
             const data = await responseJson.json();
             console.log(data);
             document.getElementById("username").innerHTML = data.username;
