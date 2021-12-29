@@ -5,5 +5,5 @@
 # #RUN /bin/sleep 3600
 # CMD nginx -g "daemon off;"
 
-FROM nginx
-ADD index.html /usr/share/nginx/html
+FROM httpd:2.4
+COPY index.html /usr/local/apache2/htdocs/
