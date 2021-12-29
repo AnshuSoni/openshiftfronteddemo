@@ -30,18 +30,21 @@
     <script>
         fetchData();
         async function fetchData(){
-            const responseJson = await fetch(
-              'http://test-db-from-java-2-algosec-altran.apps.frilmop44cdev.tsa.capgemini.com/',
-              {
-                mode: 'no-cors',
-                method: 'GET',
-                cache: 'no-cache',
-                header: {
-                  'Content-Type': 'application/json',
-                }
-              });
+            // const responseJson = await fetch('http://test-db-from-java-2-algosec-altran.apps.frilmop44cdev.tsa.capgemini.com/',
+            //   {
+            //     mode: 'no-cors',
+            //     method: 'GET',
+            //     cache: 'no-cache',
+            //     header: {
+            //       'Content-Type': 'application/json',
+            //       'Access-Control-Allow-Origin': '*'
+            //     }
+            //   });
+
+            const responseJson = await fetch('http://test-db-from-java-2-algosec-altran.apps.frilmop44cdev.tsa.capgemini.com/');
+            console.log(responseJson);
             const data = await responseJson.json();
-            console.log(data);
+            // console.log(data);
             document.getElementById("username").innerHTML = data.username;
             document.getElementById("useremail").innerHTML = data.useremail;
         }
